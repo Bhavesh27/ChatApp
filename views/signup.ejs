@@ -2,12 +2,16 @@
 <html>
 <head>
 
-    <title>Chat Application</title>
+    <title>Footballkik</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/login.css" >
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/uploads/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/login.css">
+
 </head>
 
 <body>
@@ -25,7 +29,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <h1 class="logo-div">
-                                <a href="/">Chat Application</a>
+                                <a href="/">Footballkik</a>
                             </h1>
                         </div>
 
@@ -63,38 +67,51 @@
 <div id="main">
     <div class="main">
         <form action="/signup" method="post">
+            <h1>
+                <a href="/auth/facebook" class="btn-social btn-facebook btn-lg">
+                    <i class="fa fa-facebook"></i> Sign Up With Facebook
+                </a>
+            </h1>
+            
+            <h1>
+                <a href="/auth/google" class="btn-social btn-gplus btn-lg">
+                    <i class="fa fa-google-plus"></i> Sign Up With Google
+                </a>
+            </h1>
 
             <h1>
                 Register
             </h1>
-			
-			<%  if(hasErrors) { %>
-					<div class="alert alert danger text-center">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <%  _.forEach(messages, function(error) { %>	
-							<%= error %> <br>
-						<% }) %>
-					</div>
-			<%  } %>
+            
+            <% if(hasErrors) {%>
+                <div class="alert alert-danger text-center">
+                   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                   <% _.forEach(messages, function(error){ %>
+                       <%= error %><br>
+                   <% }) %>
+                    
+                </div>
+            <% } %>
 
             <div class="inset">
                 <p>
                   <label for="username">USERNAME</label>
-                  <input type="text" name="username" class="" placeholder="Enter Username">
+                  <input type="text" name="username" class="" placeholder="">
                 </p>
 
                 <p>
-                    <label for="email">EMAIL ID</label>
-                    <input type="text" name="email" placeholder="Enter Email ID" />
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="text" name="email" placeholder="" />
                 </p>
                 <p>
                     <label for="password">PASSWORD</label>
-                    <input type="password" name="password" placeholder="Enter Password" />
+                    <input type="password" name="password" placeholder="" />
                 </p>
 
             </div>
 
             <p class="p-container">
+                <span><a href="" style="color:white;padding-left:10px;padding-right:10px">|</a></span>
                 <span><a href="/">Login</a></span>
                 <input type="submit" class="login-log" style=" background: #3bb5ec; border: #3bb5ec;" value="Register">
             </p>
@@ -102,7 +119,7 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
