@@ -14,3 +14,4 @@
      * Run command -> 
                 npm run start
      * Make sure local mongodb instance is running or your aws setup is done before running this commmand else errors will come. 
+     * Hope it works on your system.
