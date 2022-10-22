@@ -1,5 +1,7 @@
 # Chat Application using Nodejs and SocketIO
 
+A Small chat application using socket technology
+
 ## Steps to Setup 
      
      git clone https://github.com/Bhavesh27/ChatApp.git
